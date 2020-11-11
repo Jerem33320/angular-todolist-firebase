@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-todolist-firebase"
+    }
+  },
+  "defaultProject": "angular-todolist-firebase",
+  "cli": {
+    "analytics": "b003223a-adb5-4b27-97a2-e1d1ae1763ab"
+  }
 }

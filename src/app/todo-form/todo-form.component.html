@@ -1,0 +1,9 @@
+<div class="container" style="text-align: center;">
+  <h1>Form</h1>
+  <form [formGroup]="todoForm" name="todoForm">
+    <div class="form-group">
+      <input class="form-control" style="margin: 20px;" formControlName="name" required/>
+      <button class="btn btn-primary" (click)="addTodo()">Add your Todo!</button>
+    </div>
+  </form>
+</div>

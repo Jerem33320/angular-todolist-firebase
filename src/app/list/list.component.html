@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row" *ngFor="let todo of todos" >
+   {{todo.title}}
+   <div class="col-1">
+    <button class="btn-primary" (click)="deleteTodo(todo.id)">X</button>
+  </div>
+  </div>
+</div>
