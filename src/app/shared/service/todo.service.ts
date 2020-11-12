@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../model/todo';
+import firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
+  db = firebase.firestore().collection('todolist')
   todos: Todo[]=[];
   
   constructor() { }
@@ -15,6 +17,7 @@ export class TodoService {
 
   addTodo(todo){
     this.todos.push(todo);
+    this.db.add(todo);
   }
 
   deleteTodo(id){

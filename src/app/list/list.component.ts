@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../shared/service/todo.service';
 import { Todo } from '../shared/model/todo';
+import firebase from 'firebase/app';
 
 @Component({
   selector: 'app-list',
@@ -9,6 +10,7 @@ import { Todo } from '../shared/model/todo';
 })
 
 export class ListComponent implements OnInit {
+  db = firebase.firestore().collection('todolist');
   todos: Todo[];
   constructor(private todoService: TodoService) { }
 
